@@ -17,8 +17,15 @@
     justify-content: top;
     align-items: center;
     position: relative;
-    padding: 20px;
+    padding: 30px;
     background: rgb(251, 251, 193);
+}
+
+#svgGraph{
+    width: 100%;
+    height: 80%;
+    min-height: 600px;
+    min-width: 800px;
 }
 
 

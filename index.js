@@ -10,10 +10,10 @@ const PADDING = 60;
 
 function makeLegend(left, top, side, padding, arr) {
 
-        let svg = d3.select("svg")
-          .append("g")
-          .attr("id", "legend")
-          .attr("transform", "translate(" + left + "," + top + ")");
+        let svg = d3.select("#legendData")
+          .append("svg")
+          .attr("id", "legend");
+        //   .attr("transform", "translate(" + left + "," + top + ")");
     
         svg.selectAll("rect")
           .data(arr)
@@ -51,10 +51,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const doping = data.map(item => item.Doping === "" ? false : true);
 
         // Making SVG:
-        var svg = d3.select("#visData")
-                .append("svg")
-                .attr("width", visWidth)
-                .attr("height", visHeight+PADDING*2);
+        var svg = d3.select("#svgGraph");
+                // .append("svg")
+                // .attr("width", visWidth)
+                // .attr("height", visHeight+PADDING*2);
 
         // Making scales:                
         const xScale = d3.scaleLinear()
